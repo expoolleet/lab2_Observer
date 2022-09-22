@@ -40,7 +40,7 @@ namespace laba2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(24, 35);
+            this.label1.Location = new System.Drawing.Point(24, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 31);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace laba2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(24, 77);
+            this.label2.Location = new System.Drawing.Point(24, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 31);
             this.label2.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace laba2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(24, 123);
+            this.label3.Location = new System.Drawing.Point(24, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 31);
             this.label3.TabIndex = 2;
@@ -97,6 +97,7 @@ namespace laba2
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Monitor1";
             this.Text = "Monitor1";
             this.Load += new System.EventHandler(this.Monitor1_Load);

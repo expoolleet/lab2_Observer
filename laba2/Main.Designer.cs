@@ -41,7 +41,6 @@ namespace laba2
             // 
             // turnOnButton
             // 
-            this.turnOnButton.Enabled = false;
             this.turnOnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.turnOnButton.Location = new System.Drawing.Point(54, 32);
             this.turnOnButton.Name = "turnOnButton";
@@ -85,6 +84,7 @@ namespace laba2
             // 
             // turnOffButton
             // 
+            this.turnOffButton.Enabled = false;
             this.turnOffButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.turnOffButton.Location = new System.Drawing.Point(54, 76);
             this.turnOffButton.Name = "turnOffButton";
@@ -113,7 +113,9 @@ namespace laba2
             this.ClientSize = new System.Drawing.Size(261, 349);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Weather Data";
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);

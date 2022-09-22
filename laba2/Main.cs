@@ -27,6 +27,15 @@ namespace laba2
             pub.IsBroadcasting = true;
             turnOnButton.Enabled = false;
             turnOffButton.Enabled = true;
+
+            pub.Notify();
+        }
+
+        private void turnOffButton_Click(object sender, EventArgs e)
+        {
+            pub.IsBroadcasting = false;
+            turnOnButton.Enabled = true;
+            turnOffButton.Enabled = false;
         }
 
         private void showButton_Click(object sender, EventArgs e)
@@ -37,13 +46,6 @@ namespace laba2
 
                 form.Show();
             }
-        }
-
-        private void turnOffButton_Click(object sender, EventArgs e)
-        {
-            pub.IsBroadcasting = false;
-            turnOnButton.Enabled = true;
-            turnOffButton.Enabled = false;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -57,7 +59,7 @@ namespace laba2
                 subList.Items.Add(name.Name);
             }
 
-            pub.Notify();
+
         }
 
     }

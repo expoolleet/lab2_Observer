@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace laba2
 {
     public class Publisher : IPub
     {
+        int days = 30;
+
         public bool IsBroadcasting { get ; set; }
 
         delegate void WeatherUpdate(float temp, float humidity, float press);
@@ -34,9 +37,20 @@ namespace laba2
         {
             while (IsBroadcasting)
             {
-                Temperature = random.Next(-15, 31);
-                Humidity = random.Next(30, 101);
-                Pressure = random.Next(70, 110);
+                int sumTemp = 0;
+                int sumHumidity = 0;
+                int sumPress = 0;
+
+                for (int i = 0; i < days; i++)
+                {
+                    sumTemp += random.Next(0, 31);
+                    sumHumidity += random.Next(10, 80);
+                    sumPress += random.Next(60, 110);
+                }
+
+                Temperature = sumTemp / days;
+                Humidity = sumHumidity / days;
+                Pressure = sumPress / days;
 
                 NotifyEvent?.Invoke(Temperature, Humidity, Pressure);
 

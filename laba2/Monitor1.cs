@@ -37,7 +37,7 @@ namespace laba2
             pub.RemoveSub(this);
         }
 
-        public void Update(float temp, float pressure, float humidity)
+        public void Update(float temp, float humidity, float pressure)
         {
             label1.Text = "Температура: " + temp;
             label2.Text = "Влажность: " + humidity;

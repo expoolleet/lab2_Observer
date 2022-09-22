@@ -9,7 +9,5 @@ namespace laba2
     public interface ISub
     {   
         void Update(float temp, float press, float humidity);
-
-        
     }
 }
