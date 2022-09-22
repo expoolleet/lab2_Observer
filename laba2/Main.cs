@@ -34,9 +34,9 @@ namespace laba2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //if (subList.SelectedIndex != -1)
-            //{
-            //    Form item = subList.Items[subList.SelectedIndex];
+            var matching = Assembly.GetAssembly(typeof(ISub)).GetTypes()
+                .Where(type => typeof(ISub)
+                .IsAssignableFrom(type) && !type.IsInterface);
                 
 
             //}
