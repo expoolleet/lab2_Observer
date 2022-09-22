@@ -10,6 +10,5 @@ namespace laba2
     {
         void AddSub(ISub sub);
         void RemoveSub(ISub sub);
-
     }
 }
