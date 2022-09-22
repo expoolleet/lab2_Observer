@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace laba2
 {
-    public partial class Monitor1 : Form, ISub
+    public partial class Monitor2 : Form, ISub
     {
         IPub pub;
 
-        public Monitor1()
+        public Monitor2()
         {
             InitializeComponent();
         }
 
-        public Monitor1(IPub publisher)
+        public Monitor2(IPub publisher)
         {
             InitializeComponent();
             pub = publisher;
@@ -29,7 +29,6 @@ namespace laba2
         private void Subscribe()
         {
            pub.AddSub(this);
-
         }
 
         private void Unsubscribe()
@@ -58,7 +57,7 @@ namespace laba2
             button2.Enabled = false;
         }
 
-        private void Monitor1_Load(object sender, EventArgs e)
+        private void Monitor2_Load(object sender, EventArgs e)
         {
             Subscribe();
         }

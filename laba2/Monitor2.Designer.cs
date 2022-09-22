@@ -1,7 +1,7 @@
 ﻿
 namespace laba2
 {
-    partial class Monitor1
+    partial class Monitor2
     {
         /// <summary>
         /// Required designer variable.
@@ -87,7 +87,7 @@ namespace laba2
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Monitor1
+            // Monitor2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -97,9 +97,9 @@ namespace laba2
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Monitor1";
-            this.Text = "Monitor1";
-            this.Load += new System.EventHandler(this.Monitor1_Load);
+            this.Name = "Monitor2";
+            this.Text = "Monitor2";
+            this.Load += new System.EventHandler(this.Monitor2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

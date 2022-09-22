@@ -8,13 +8,13 @@ namespace laba2
 {
     public class Publisher : IPub
     {
-        List<ISub> subs = new List<ISub>();
+        public bool IsBroadcasting { get ; set; }
 
         delegate void WeatherUpdate(float temp, float humidity, float press);
 
         event WeatherUpdate NotifyEvent;
 
-        private Random random;
+        private Random random = new Random();
 
         private float Temperature { get; set; }
         private float Humidity { get; set; }
@@ -22,23 +22,26 @@ namespace laba2
 
         public void AddSub(ISub sub)
         {
-            subs.Add(sub);
             NotifyEvent += sub.Update;
         }
 
         public void RemoveSub(ISub sub)
         {
-            subs.Remove(sub);
             NotifyEvent -= sub.Update;
         }
 
-        private void Notify()
+        public async void Notify()
         {
-            Temperature = random.Next(-15, 31);
-            Humidity = random.Next(30, 101);
-            Pressure = random.Next(70, 110);
+            while (IsBroadcasting)
+            {
+                Temperature = random.Next(-15, 31);
+                Humidity = random.Next(30, 101);
+                Pressure = random.Next(70, 110);
 
-            NotifyEvent?.Invoke(Temperature, Humidity, Pressure);
+                NotifyEvent?.Invoke(Temperature, Humidity, Pressure);
+
+                await Task.Delay(2000);
+            } 
         }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Monitor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitor2.Designer.cs">
+      <DependentUpon>Monitor2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Monitor1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="ISub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Monitor2.resx">
+      <DependentUpon>Monitor2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Monitor1.resx">
       <DependentUpon>Monitor1.cs</DependentUpon>
     </EmbeddedResource>
