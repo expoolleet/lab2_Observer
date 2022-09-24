@@ -48,6 +48,15 @@ namespace laba2
             }
         }
 
+        private void turnOffButton_Click(object sender, EventArgs e)
+        {
+<<<<<<<<< Temporary merge branch 1
+            pub.IsBroadcasting = false;
+            turnOnButton.Enabled = true;
+            turnOffButton.Enabled = false;
+>>>>>>>>> Temporary merge branch 2
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
             var matching = Assembly.GetAssembly(typeof(ISub)).GetTypes()
