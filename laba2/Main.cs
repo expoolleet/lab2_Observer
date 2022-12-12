@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using laba2.Publishers;
+using laba2.Interfaces;
 
 namespace laba2
 {
@@ -21,13 +17,11 @@ namespace laba2
             InitializeComponent();
         }
 
-
         private void turnOnButton_Click(object sender, EventArgs e)
         {
             pub.IsBroadcasting = true;
             turnOnButton.Enabled = false;
             turnOffButton.Enabled = true;
-
             pub.Notify();
         }
 
@@ -42,7 +36,7 @@ namespace laba2
         {
             if (subList.SelectedIndex != -1)
             {
-                var form = Activator.CreateInstance(Type.GetType("laba2." + subList.Items[subList.SelectedIndex].ToString()), pub) as Form;
+                var form = Activator.CreateInstance(Type.GetType("laba2.Monitors." + subList.Items[subList.SelectedIndex].ToString()), pub) as Form;
 
                 form.Show();
             }
@@ -58,9 +52,6 @@ namespace laba2
             {
                 subList.Items.Add(name.Name);
             }
-
-
         }
-
     }
 }

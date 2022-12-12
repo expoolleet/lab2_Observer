@@ -46,33 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Monitor2.cs">
+    <Compile Include="Monitors\Monitor2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Monitor2.Designer.cs">
+    <Compile Include="Monitors\Monitor2.Designer.cs">
       <DependentUpon>Monitor2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Monitor1.cs">
+    <Compile Include="Monitors\Monitor1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Monitor1.Designer.cs">
+    <Compile Include="Monitors\Monitor1.Designer.cs">
       <DependentUpon>Monitor1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Publisher.cs" />
+    <Compile Include="Publishers\Publisher.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="IPub.cs" />
-    <Compile Include="ISub.cs" />
+    <Compile Include="Interfaces\IPub.cs" />
+    <Compile Include="Interfaces\ISub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Monitor2.resx">
+    <EmbeddedResource Include="Monitors\Monitor2.resx">
       <DependentUpon>Monitor2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Monitor1.resx">
+    <EmbeddedResource Include="Monitors\Monitor1.resx">
       <DependentUpon>Monitor1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">

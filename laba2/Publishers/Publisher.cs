@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using laba2.Interfaces;
 
-namespace laba2
+namespace laba2.Publishers
 {
-    public class Publisher : IPub
+    internal class Publisher : IPub
     {
-        int days = 30;
-
-        public bool IsBroadcasting { get ; set; }
+        private int days = 30;
+        public bool IsBroadcasting { get; set; }
 
         delegate void WeatherUpdate(float temp, float humidity, float press);
 
-        event WeatherUpdate NotifyEvent;
+        private event WeatherUpdate NotifyEvent;
 
         private Random random = new Random();
 
@@ -51,11 +47,10 @@ namespace laba2
                 Temperature = sumTemp / days;
                 Humidity = sumHumidity / days;
                 Pressure = sumPress / days;
-
                 NotifyEvent?.Invoke(Temperature, Humidity, Pressure);
 
                 await Task.Delay(2000);
-            } 
+            }
         }
     }
 }
